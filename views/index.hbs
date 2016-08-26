@@ -1,0 +1,14 @@
+<ul>
+  {{#each list}}
+  <li class="{{@index}}"> {{this}}
+    <a href="/todo/del/{{@index}}">X</a>
+    <a href="#"><i class="fa fa-pencil {{@index}}Button" aria-hidden="true"></i></a>
+    <script>
+      $(".{{@index}}Button").click(function(){
+        var $replacement = $("<form action='/todo/edit/{{@index}}' method='get'><input type = 'text' name = 'editToDo' id = 'editToDo' value = '{{this}}' focus/> <input type = 'submit' /> </form>")
+        $(".{{@index}}").replaceWith($replacement);
+      })
+    </script>
+  </li>
+  {{/each}}
+</ul>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>My To Do List</h1>
+    {{{body}}}
+
+    <form action="/todo/add/" method="post">
+      <p>
+        <label for="newtodo">What should I do?</label>
+        <input type="text" name="newtodo" id="newtodo" autofocus />
+        <input type="submit" />
+      </p>
+    </form>
+
+
+
+  </body>
+</html>
